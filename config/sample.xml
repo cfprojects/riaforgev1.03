@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<id>[Not using my own id]</id> 
+	<username>[Not Giving you my username]</username>
+	<password>[Not Giving you my password]</password>
+	<name>Squidhead</name>
+	<shortdescription>A application generator for CF and MSSQL that generates application using stored procedures.</shortdescription>
+	<requirements>  Microsoft SQL Server 2000 or Microsoft SQL Server 2005 ColdFusion MX 7 </requirements> 
+	<projectcategoryidfk>1</projectcategoryidfk>
+	<version>  0.9.8.5 </version> 
+	<externalurl /> 
+	<externaldownload />
+	<licenseidfk>1</licenseidfk>
+	<removecurrentfileflag>0</removecurrentfileflag>
+	<newdownload>W:\OpenSourceProjects\Squidhead\squidheadv0.9.8.5.zip</newdownload>
+	<forums>TRUE</forums> 
+	<externalforums />
+	<blog>TRUE</blog> 
+	<externalblog />
+	<externalblogrss />
+	<bugtracker>TRUE</bugtracker> 
+	<externalbugtracker />
+	<wiki>FALSE</wiki> 
+	<externalwiki />
+	<svn>FALSE</svn> 
+	<demourl />
+	<description>
+		What does it do?
+		
+			* It inspects Database
+			* It analyzes the tables and views
+			* It creates INSERT, SELECT, UPDATE, DELETE and LIST stored procedures for every TABLE.
+			* It creates LIST stored procedure for every VIEW.
+			* It adds them to the database.
+			* It assigns the proper GRANT permissions
+		
+		Then it does a second pass
+		
+			* It inspects the database
+			* It analyses all of the stored procedures not just the ones the process creates
+			* It creates two sets of CFC's: GATEWAY and DAO
+			* It creates a DAO for each TABLE and VIEW.
+			* It creates the &lt;cfstoredProcedure&gt; calls for each stored procedure
+			* It creates the &lt;cffunction&gt; to wrap the storedprocedure in.
+			* It adds each &lt;cffunction&gt; &lt;cfstoredproc&gt; combo within the appropriate CFC per table.
+			* It places any operation with SELECT, DELETE, UPDATE, AND INSERT in the title within the DAO CFC'S.
+			* It places all other actions to the GATEWAY CFC's.
+			* It writes the CFC's to disk.
+		
+			* It writes Custom Tag components to produce nuggets of Editing and Listing functions.
+		
+			* It strings all of these together to produce a simplistic CRUD application.
+	</description>  
+</config>
